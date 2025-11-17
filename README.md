@@ -10,18 +10,16 @@ So you only have to write your equation out ONCE!
 Install eqalc by cloning it and then importing like this:
 
 ```typ
-#import "@preview/eqalc:0.1.3": math-to-func, math-to-code, math-to-table
+#import "@preview/eqalc:0.1.4": math-to-func, math-to-table
 
 #let f = $g(t)=2t dot sqrt(e^t)+ln(t)+2pi$
 #f\
-#math-to-code(f)
 #math-to-table(f, min: 1, max: 5, step: 1)
 
 // `math-to-func` will return a function that can be used to map over values
 
 // You can also use labels:
 $ g(t) = 2t dot sqrt(e^t) + ln(t) + 2pi $ <eq>
-#context math-to-code(<eq>)
 #context math-to-table(<eq>, min: 1, max: 5, step: 1)
 ```
 
@@ -30,7 +28,6 @@ $ g(t) = 2t dot sqrt(e^t) + ln(t) + 2pi $ <eq>
 Available functions at the moment:
 
 - `math-to-func`
-- `math-to-code`
 - `math-to-table`
 - `math-to-data`
 
@@ -76,4 +73,5 @@ If the given math expression is an equation, the left hand side will be turned i
 Only one variable is allowed in the right hand side of the equation.
 
 ## Contributing
+
 Any contributions are welcome! Just fork the repository and make a pull request.

@@ -1,3 +1,6 @@
+# v0.1.4
+fixed a recursion bug with roots (thanks to akaBilih for the PR)
+
 # v0.1.3
 bug fix:
 
