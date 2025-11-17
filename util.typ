@@ -71,7 +71,7 @@
         "calc.root("
           + math-to-str(n.radicand, depth: depth + 1)
           + ", "
-          + n.at("index", default: "2")
+          + math-to-str(n.at("index", default: "2"), depth: depth + 1)
           + ")"
       )
       // Fractions
